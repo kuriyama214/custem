@@ -1,0 +1,50 @@
+<div class="customer">
+  <table class="name" border="1">
+    <tr>
+      <th rowspan="2">ID</th><td rowspan="2" class="user-id"><%= @user.id %></td><th rowspan="2">お名前</th><td><%= @user.name_kana %></td>
+    </tr>
+    <tr>
+       <td class="user-name"><%= @user.name %></td>
+    </tr>
+  </table>
+  
+  <table class="age" border="1">
+    <tr>
+    　<th>年齢</th>
+    　<td><%= @user.age %></td>
+    　<td>歳</td>
+    </tr>
+  </table>
+</div>
+  
+  <table class="information" border="1">
+      <tr><th colspan="2">登録情報</th></tr>
+      <tr>
+        <th>郵便番号</th><td><%= @user.post_code %></td>
+      </tr>
+      <tr>
+        <th>住所</th><td><%= @user.address %></td>
+      </tr>
+      <tr>
+        <th>建物名</th><td><%= @user.building %></td>
+      </tr>
+      <tr>
+        <th>電話番号</th><td><%= @user.tell_number %></td>
+      </tr>
+      <tr>
+        <th>生年月日</th><td><%= @user.birthday %></td>
+      </tr>
+  </table>
+  
+  <table class="classification" border="1">
+      <tr><th colspan="2">顧客分類</th></tr>
+      <tr>
+        <th>年齢</th><td><%= @user.age %>歳</td>
+      </tr>
+      <tr>
+        <th>職業</th><td><%= @user.job %></td>
+      </tr>
+      <tr>
+        <th class="memo">メモ</th><td><%= @user.memo %></td>
+      </tr>
+  </table>

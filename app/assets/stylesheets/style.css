@@ -1,0 +1,212 @@
+.content {
+  width: 100%;
+  border-collapse:separate;
+  border-spacing: 0;
+}
+
+.content th{
+  text-align: center;
+  color:white;
+  background: linear-gradient(#829ebc,#225588);
+  border-left: 1px solid #3c6690;
+  border-top: 1px solid #3c6690;
+  border-bottom: 1px solid #3c6690;
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+  padding: 10px 0;
+}
+
+.content td{
+  text-align: center;
+  border-left: 1px solid #a8b7c5;
+  border-bottom: 1px solid #a8b7c5;
+  border-top:none;
+  box-shadow: 0px -3px 5px 1px #eee inset;
+  padding: 10px 0;
+}
+
+.customer {
+  text-align: center;
+}
+
+.name {
+  display: inline-block; 
+  position: relative;
+  right: 284px;
+  border-collapse:separate;
+  border-spacing: 0;
+}
+
+.name th {
+  color:white;
+  background: linear-gradient(#829ebc,#225588);
+  width: 48px;
+  padding: 3px;
+}
+
+.name td {
+  width: 110px;
+  height: 20px;
+}
+
+.name .user-id {
+  width: 42px;
+}
+
+.name .user-name {
+  width: 250px;
+}
+.age {
+  position: relative;
+  right: 340px;
+  display: inline-block; 
+  border-collapse:separate;
+  border-spacing: 0;
+}
+
+.age th {
+  color:white;
+  background: linear-gradient(#829ebc,#225588);
+  width: 40px;
+}
+
+.information {
+  margin: auto;
+  border-collapse:separate;
+  border-spacing: 0;
+  width: 80%;
+  height: 220px;
+}
+
+.information th {
+  color:white;
+  background: linear-gradient(#829ebc,#225588);
+  width: 80px;
+}
+
+.information td {
+  padding-left: 5px;
+}
+
+.classification {
+  margin: auto;
+  margin-top: 10px;
+  border-collapse:separate;
+  border-spacing: 0;
+  width: 80%;
+  height: 150px;
+}
+
+.classification th {
+  color:white;
+  background: linear-gradient(#829ebc,#225588);
+  width: 80px;
+}
+
+.classification td {
+  padding-left: 5px
+}
+
+.classification .memo {
+  height: 100px;
+}
+
+
+ h2 {
+   position: relative;
+   left: 28px;
+ }
+
+.customer-new {
+  width: 80%;
+  border-collapse:separate;
+  border-spacing: 0;
+  
+}
+
+.customer-new tr {
+  height: 40px;
+}
+
+.customer-new th {
+  width: 150px;
+  color:white;
+  background: linear-gradient(#829ebc,#225588);
+}
+
+.customer-new  td {
+  padding-left: 12px;
+  height: 30px;
+}
+
+.customer-new input[type="text"] {
+  height: 70%;
+}
+
+.customer-new .memo {
+  height: 100px;
+}
+
+
+.age_field input[type="text"] {
+  width: 40px;
+  margin-right: 5px;
+}
+
+.address_field input[type="text"] {
+  width: 300px;
+}
+
+.building_field input[type="text"] {
+  width: 300px;
+}
+
+.memo_field  input[type="text"] {
+  width: 98%;
+  height: 80px;
+}
+
+.button {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 14pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 11px;   /* 余白       */
+  background    : #00007f;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  opacity       : 1;           /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+}
+.button:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  opacity       : 0.8;         /* カーソル時透明度 */
+}
+
+.new-button {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 14pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 11px;   /* 余白       */
+  background    : #00007f;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  opacity       : 1;           /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  margin-bottom: 5px;
+}
+
+.new-button:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  opacity       : 0.8;         /* カーソル時透明度 */
+}
+
+.search-form{
+  width          : 290px;              /* BOXの幅               */
+  height         : 25px;               /* BOXの高さ             */
+  letter-spacing : 0.1em;              /* 文字間隔              */
+  font-weight    : bold;               /* 太字                  */
+  line-height    : 0;                  /* 標準の行高さ          */
+}

@@ -1,0 +1,36 @@
+<h1>custem</h1>
+    <button type="button" onclick="location.href='/users/new'" class="new-button">顧客登録</button>
+    <button type="button" onclick="location.href='/'" class="new-button">顧客一覧</button>
+    
+    
+    <div class="search-form">
+      <%= form_tag('/users/search', method: :get) do %>
+        <%= text_field_tag :search %>
+        <%= submit_tag '検索', :name => nil %>
+      <% end %>
+    </div>
+    
+    <table class="content">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>名前</th>
+        <th>性別</th>
+        <th>年齢</th>
+        <th>生年月日</th>
+        <th>email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= link_to "#{user.name}", url_for(user) %></td>
+          <td><%= user.gender %></td>
+          <td><%= user.age %></td>
+          <td><%= user.birthday %></td>
+          <td><%= user.email %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    </table>

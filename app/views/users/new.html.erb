@@ -1,0 +1,99 @@
+<%= form_for(@user, method: :post ) do |f| %>
+  <h2>顧客登録</h2>
+  <%= render 'layouts/error_messages', model: f.object %>
+  <table class="customer-new" border="1">
+    <thead>
+      <tr>
+        <th class="name_field">名前</th><td><%= f.text_field :family_name, placeholder:"姓" %><%= f.text_field :first_name, placeholder:"名" %></td>
+      </tr>
+      
+      <tr>
+        <th class="kana_field">カナ</th><td><%= f.text_field :family_name_kana, placeholder:"セイ" %><%= f.text_field :first_name_kana, placeholder:"メイ" %></td>
+      </tr>
+      
+      <tr>
+        <th>性別</th>
+        <td class="gender_field">
+          <label><%= f.radio_button :gender, "男" %> 男 </label>
+          <label><%= f.radio_button :gender, "女" %> 女 </label>
+        </td>
+      </tr>
+      
+      <tr>
+        <th>生年月日</th>
+          <td class="birthday_field">
+            <%= raw sprintf(
+              f.date_select(
+                :birthday,
+                use_month_numbers: true,
+                start_year: 1930,
+                end_year: (Time.now.year - 18),
+                default: Date.new(1989, 1, 1),
+                date_separator: '%s'),
+              '年 ', '月 ') + '日' %>
+          </td>
+      </tr>
+      
+      <tr>
+        <th>年齢</th>
+          <td class="age_field">
+            <%= f.text_field :age %>歳
+          </td>
+      </tr>
+      
+      <tr>
+        <th>職業</th>
+          <td class="job_field">
+            <%= f.select :job, [["公務員", "公務員"], ["会社員", "会社員"],  ["自営業/自由業", "自営業/自由業"], ["学生", "学生"],["パート/アルバイト", "パート/アルバイト"],["主婦", "主婦"],["無職", "無職"],["その他", "その他"] ],  :prompt => "選択してください" %>
+          </td>
+      </tr>
+      
+      <tr>
+        <th>電話番号</th>
+          <td class="tell_number_field">
+            <%= f.text_field :tell_number,placeholder:"入力してください" %>
+          </td>
+      </tr>
+      
+      <tr>
+        <th>メールアドレス</th>
+          <td class="email_field">
+            <%= f.text_field :email, placeholder:"例: custem@mail.com" %>
+          </td>
+      </tr>
+      
+      <tr>
+        <th>郵便番号</th>
+          <td class="post_code_field">
+            <%= f.text_field :post_code, placeholder:"郵便番号" %>
+          </td>
+      </tr>
+        
+      <tr>
+        <th>住所</th>
+          <td class="address_field">
+            <%= f.text_field :address, placeholder:"住所" %>
+          </td>
+      </tr>
+      
+      <tr>
+        <th>建物名</th>
+          <td class="building_field">
+            <%= f.text_field :building,placeholder:"建物名" %>
+          </td>
+      </tr>
+      
+      <tr>
+        <th class="memo">メモ</th>
+          <td class="memo_field">
+            <%= f.text_field :memo %>
+          </td> 
+      </tr>
+      
+    </thead>
+  </table>
+      
+  <div class="submit_btn">
+    <input type="submit" value"登録" class="button">
+  </div>
+  <% end %>
